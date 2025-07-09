@@ -2,7 +2,7 @@
 
 Submitted by: **Kelly Chan**
 
-This web app: **insert description**
+This web app: **Allows users to discover new things by clicking through random new stuff. The web app will display one element at a time with information through API calls in a random fashion. The user can influence what they want to see next via a ban list. This web app lets you explore amazing space photos from NASA’s Astronomy Picture of the Day (APOD). You can see random images or videos of the universe, and choose to block certain months, years, or creators so you don’t see pictures you don’t like.**
 
 Time spent: **3.5** hours spent in total
 
