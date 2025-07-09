@@ -1,0 +1,203 @@
+/* Reset basics */
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  background-color: #10132a;
+  color: #f0f0f0;
+  line-height: 1.5;
+}
+
+/* Container grid: Gallery (left), Main (center), Ban List (right) */
+.whole-page {
+  display: grid;
+  grid-template-columns: 350px 1fr 300px;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "history header sideNav"
+    "history main sideNav";
+  min-height: 100vh;
+  gap: 20px;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+header{
+  text-align: center;
+}
+
+/* Previous Gallery (history) - LEFT */
+.history-sidebar {
+  grid-area: history;
+  background-color: #1f2041;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.history-sidebar h2 {
+  margin-top: 0;
+  color: #adadff;
+}
+
+/* Ban List (sideNav) - RIGHT */
+.sideNav {
+  grid-area: sideNav;
+  background-color: #1f2041;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.sideNav h2,
+.sideNav h4 {
+  margin-top: 0;
+  color: #adadff;
+}
+
+.sideNav ul {
+  padding-left: 1rem;
+}
+
+.sideNav li {
+  margin-bottom: 0.5rem;
+}
+
+.sideNav button {
+  background-color: #ff5050;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 0 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.sideNav button:hover {
+  background-color: #cc0000;
+}
+
+/* Main APOD content (center) */
+.current-apod {
+  grid-area: main;
+  background-color: #1f2041;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px #3f51b5aa;
+}
+
+.current-apod h2 {
+  margin-top: 0;
+  color: #adadff;
+}
+
+.current-apod p {
+  margin: 0.5rem 0 1rem;
+  color: #ccccee;
+  font-size: 0.9rem;
+}
+
+.current-apod img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #6688ffaa;
+}
+
+.current-apod a {
+  color: #79aaff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.current-apod a:hover {
+  text-decoration: underline;
+}
+
+/* Gallery styling inside history-sidebar */
+.gallery ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery li {
+  margin-bottom: 1.5rem;
+}
+
+.gallery h4 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  color: #79aaff;
+}
+
+.gallery p {
+  margin: 0.1rem 0 0.5rem;
+  font-size: 0.85rem;
+  color: #ccccee;
+}
+
+.gallery img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #4567ff88;
+}
+
+/* Button styles */
+button {
+  background-color: #4466ff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3344cc;
+}
+
+/* Form inputs */
+input[type="text"] {
+  border-radius: 6px;
+  border: 1.5px solid #555577;
+  padding: 0.3rem 0.5rem;
+  width: 80px;
+  font-size: 1rem;
+  color: #f0f0f0;
+  background-color: #262a49;
+  margin-left: 0.3rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #7799ff;
+}
+
+.attribute-button,
+.banned-item {
+  background-color: #272adc;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+}
+
+.attribute-button:hover,
+.banned-item:hover {
+  background-color: #1e21b1;
+}
